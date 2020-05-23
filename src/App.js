@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
+import FirstTest from './FirstTestFromTheHip'
 import './App.css';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         >
           jeff-king.net
         </a>
+        <FirstTest />
       </header>
     </div>
   );
