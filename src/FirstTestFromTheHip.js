@@ -1,9 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
 
-class FirstTestFromTheHip extends Component {
-  render() {
-    return <p>Hello React World!</p>;
-  }
-}
+const FirstTestFromTheHip = () => <p>Hello React World!</p>
 
 export default FirstTestFromTheHip;
