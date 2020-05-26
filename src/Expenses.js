@@ -16,16 +16,9 @@ class Expenses extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  showTestText() {
-    console.log(
-      `This id is ${this.state.id}, and this date is ${this.state.expenseDate}`
-    );
-  }
-
   componentDidMount() {
-    const dateObject = new Date();
-    const date = dateObject.getDate();
-    console.log(date);
+    const dateObject = new Date()
+    const date = dateObject.getDate()
     this.setState((prevState) => {
       if (prevState.id === null) {
         return {
@@ -52,10 +45,9 @@ class Expenses extends Component {
   render() {
     return (
       <div>
-        <h1>Hello Expenses World</h1>
-        <p>{this.state.id}</p>
-        <p>{this.state.expenseDate}</p>
-        <p>{this.state.expenseDescription}</p>
+        <p>Expense Id:  {this.state.id}</p>
+        <p>Today is day {this.state.expenseDate} of this month</p>
+        <p>Description:  {this.state.expenseDescription}</p>
         <Button onClick={this.handleClick}>Click Me</Button>
       </div>
     );

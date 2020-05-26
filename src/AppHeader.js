@@ -6,22 +6,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 class AppHeader extends Component {
   render() {
     return (
-      <header className="App-header">
-        <div className="container d-flex">
-          <div className="row m-auto">
-            <div className="col-sm-4">
+      <header>
+        <div className="container-fluid p-0 m-0 border">
+          <div className="row">
+            <div className="col-sm-2 p-2 my-0 border">
               <img src={logo} className="App-logo" alt="logo" />
             </div>
-            <div className="col-sm-8">
-              <p>Evolving, living.</p>
-              <a
-                className="App-link"
-                href="https://jeff-king.net"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                jeff-king.net
-              </a>
+            <div className="col-sm-10 p-2 my-0 border">
+              <h1>Evolving, Existing</h1>
             </div>
           </div>
         </div>
