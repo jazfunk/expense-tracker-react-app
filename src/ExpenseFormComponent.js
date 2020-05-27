@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function ExpenseFormComponent(props) {
   return (
     <main>
-      <form onSubmit={props.handleSubmit}>
+      <form className="form-inline" onSubmit={props.handleSubmit}>
         <div className="input-group mb-3">
           <div className="input-group-prepend">
             <span className="input-group-text">#</span>

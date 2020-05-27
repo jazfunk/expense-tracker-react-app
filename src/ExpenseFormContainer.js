@@ -11,6 +11,7 @@ class ExpenseFormContainer extends Component {
       expenseDescription: "",
       expenseAmount: 0,
       expenseVendor: "",
+      expensesList: {},
     };
 
     this.handleChange = this.handleChange.bind(this);
