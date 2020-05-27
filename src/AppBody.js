@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Expenses from "./Expenses";
+import ExpenseForm from "./ExpenseFormContainer"
 import "bootstrap/dist/css/bootstrap.min.css";
 
 class AppBody extends Component {
@@ -7,7 +7,7 @@ class AppBody extends Component {
     return (
       <div className="container-fluid border">
         <div className="App-body">
-          <Expenses />
+          <ExpenseForm />
         </div>
       </div>
     );
