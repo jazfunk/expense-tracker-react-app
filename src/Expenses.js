@@ -49,6 +49,7 @@ class Expenses extends Component {
         <p>Today is day {this.state.expenseDate} of this month</p>
         <p>Description:  {this.state.expenseDescription}</p>
         <Button onClick={this.handleClick}>Click Me</Button>
+        <h3>Expense Tracker</h3>
       </div>
     );
   }

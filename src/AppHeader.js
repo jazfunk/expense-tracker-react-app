@@ -13,7 +13,7 @@ class AppHeader extends Component {
               <img src={logo} className="App-logo" alt="logo" />
             </div>
             <div className="col-sm-10 p-2 my-0 border">
-              <h1>Evolving, Existing</h1>
+              <h1>Expense Tracker (react)</h1>
             </div>
           </div>
         </div>
