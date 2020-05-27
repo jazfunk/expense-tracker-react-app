@@ -4,36 +4,69 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function ExpenseFormComponent(props) {
   return (
     <main>
-      <form>
-        <input
-          name="expenseDate"
-          value={props.expenses.expenseDate}
-          onChange={props.handleChange}
-          placeholder="Date"
-        />
-        <br />
-        <input
-          name="expenseDescription"
-          value={props.expenses.expenseDescription}
-          onChange={props.handleChange}
-          placeholder="Description"
-        />
-        <br />
-        <input
-          name="expenseAmount"
-          value={props.expenses.expenseAmount}
-          onChange={props.handleChange}
-          placeholder="Amount"
-        />
-        <br />
-        <input
-          name="expenseVendor"
-          value={props.expenses.expenseVendor}
-          onChange={props.handleChange}
-          placeholder="Vendor"
-        />
-        <br />
-        <button>Submit</button>
+      <form onSubmit={props.handleSubmit}>
+        <div className="input-group mb-3">
+          <div className="input-group-prepend">
+            <span className="input-group-text">#</span>
+          </div>
+          <input
+            type="date"
+            id="date"
+            name="expenseDate"
+            value={props.expenses.expenseDate}
+            className="form-control"
+            onChange={props.handleChange}
+            placeholder="Date"
+          />
+        </div>
+
+        <div className="input-group mb-3">
+          <div className="input-group-prepend">
+            <span className="input-group-text">What?</span>
+          </div>
+          <input
+            type="text"
+            id="description"
+            name="expenseDescription"
+            value={props.expenses.expenseDescription}
+            className="form-control"
+            onChange={props.handleChange}
+            placeholder="Description"
+          />
+        </div>
+
+        <div className="input-group mb-3">
+          <div className="input-group-prepend">
+            <span className="input-group-text">$</span>
+          </div>
+          <input
+            type="number"
+            id="amount"
+            name="expenseAmount"
+            min=".00"
+            step="any"
+            value={props.expenses.expenseAmount}
+            className="form-control"
+            onChange={props.handleChange}
+            placeholder="0.00"
+          />
+        </div>
+
+        <div className="input-group mb-3">
+          <div className="input-group-prepend">
+            <span className="input-group-text">Who?</span>
+          </div>
+          <input
+            id="vendor"
+            name="expenseVendor"
+            value={props.expenses.expenseVendor}
+            className="form-control"
+            onChange={props.handleChange}
+            placeholder="Vendor"
+          />
+        </div>
+
+        <button className="btn-primary mb-3">Add Expense</button>
       </form>
 
       <hr />
