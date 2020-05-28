@@ -1,15 +1,38 @@
-import React, { Component } from "react";
+import React from "react";
+import * as ReactBootStrap from "react-bootstrap"
 
-class ExpensesTable extends Component {
-  constructor() {
-    super()
-    this.state = {}
-  }
-  render() {
-    return (
-
+const ExpensesTable = (props) => {
+  
+  const renderExpense = (expense, index) => {
+    return(
+      <tr key={index}>
+        <td>{expense.expenseDate}</td>
+        <td>{expense.expenseDescription}</td>
+        <td>{expense.expenseAmount}</td>
+        <td>{expense.expenseVendor}</td>
+      </tr>
     )
   }
-}
+
+  return (
+    <div>
+      <ReactBootStrap.Table striped bordered hover>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Vendor</th>
+          </tr>
+        </thead>
+        <tbody>
+          {props.expenses.map(renderExpense)}
+        </tbody>
+      </ReactBootStrap.Table>
+    </div>
+
+  )
+
+};
 
 export default ExpensesTable;
