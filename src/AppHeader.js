@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 class AppHeader extends Component {
   render() {
@@ -13,7 +12,8 @@ class AppHeader extends Component {
               <img src={logo} className="App-logo" alt="logo" />
             </div>
             <div className="col-sm-10 p-2 my-0 border">
-              <h1>Expense Tracker (react)</h1>
+              <h1>Expense Tracker</h1>
+              <h4>with React & Bootstrap 4</h4>
             </div>
           </div>
         </div>

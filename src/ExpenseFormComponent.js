@@ -1,13 +1,12 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 function ExpenseFormComponent(props) {
   return (
     <main>
-      <form className="form-inline" onSubmit={props.handleSubmit}>
+      <form className="form" onSubmit={props.handleSubmit}>
         <div className="input-group mb-3">
           <div className="input-group-prepend">
-            <span className="input-group-text">#</span>
+            <span className="input-group-text">Date</span>
           </div>
           <input
             type="date"
@@ -37,7 +36,7 @@ function ExpenseFormComponent(props) {
 
         <div className="input-group mb-3">
           <div className="input-group-prepend">
-            <span className="input-group-text">$</span>
+            <span className="input-group-text">Amount-$</span>
           </div>
           <input
             type="number"
@@ -66,15 +65,14 @@ function ExpenseFormComponent(props) {
           />
         </div>
 
-        <button className="btn-primary mb-3">Add Expense</button>
+        <button className="btn-primary ml-3 mb-3">Add Expense</button>
       </form>
-
-      <hr />
+      {/* <hr />
       <h2>You entered:</h2>
       <p>{props.expenses.expenseDate}</p>
       <p>{props.expenses.expenseDescription}</p>
       <p>{props.expenses.expenseAmount}</p>
-      <p>{props.expenses.expenseVendor}</p>
+      <p>{props.expenses.expenseVendor}</p> */}
     </main>
   );
 }

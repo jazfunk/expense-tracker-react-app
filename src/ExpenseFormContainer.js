@@ -1,17 +1,14 @@
 import React, { Component } from "react";
 import ExpenseComponent from "./ExpenseFormComponent";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 class ExpenseFormContainer extends Component {
   constructor() {
     super();
     this.state = {
-      id: 0,
       expenseDate: "",
       expenseDescription: "",
       expenseAmount: 0,
       expenseVendor: "",
-      expensesList: {},
     };
 
     this.handleChange = this.handleChange.bind(this);
