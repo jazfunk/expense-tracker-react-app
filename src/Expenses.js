@@ -35,6 +35,7 @@ class Expenses extends Component {
   render() {
     return (
 
+      <h3>Expense Tracker</h3>
 
       // <div>
       //   <p>Expense Id:  {this.state.id}</p>
