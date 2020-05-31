@@ -12,7 +12,7 @@ function ExpenseFormComponent(props) {
             type="date"
             id="date"
             name="expenseDate"
-            value={props.expenses.expenseDate}
+            value={props.expense.expenseDate}
             className="form-control"
             onChange={props.handleChange}
             placeholder="Date"
@@ -27,7 +27,7 @@ function ExpenseFormComponent(props) {
             type="text"
             id="description"
             name="expenseDescription"
-            value={props.expenses.expenseDescription}
+            value={props.expense.expenseDescription}
             className="form-control"
             onChange={props.handleChange}
             placeholder="Description"
@@ -44,7 +44,7 @@ function ExpenseFormComponent(props) {
             name="expenseAmount"
             min=".00"
             step="any"
-            value={props.expenses.expenseAmount}
+            value={props.expense.expenseAmount}
             className="form-control"
             onChange={props.handleChange}
             placeholder="0.00"
@@ -58,7 +58,7 @@ function ExpenseFormComponent(props) {
           <input
             id="vendor"
             name="expenseVendor"
-            value={props.expenses.expenseVendor}
+            value={props.expense.expenseVendor}
             className="form-control"
             onChange={props.handleChange}
             placeholder="Vendor"
@@ -69,10 +69,10 @@ function ExpenseFormComponent(props) {
       </form>
       {/* <hr />
       <h2>You entered:</h2>
-      <p>{props.expenses.expenseDate}</p>
-      <p>{props.expenses.expenseDescription}</p>
-      <p>{props.expenses.expenseAmount}</p>
-      <p>{props.expenses.expenseVendor}</p> */}
+      <p>{props.expense.expenseDate}</p>
+      <p>{props.expense.expenseDescription}</p>
+      <p>{props.expense.expenseAmount}</p>
+      <p>{props.expense.expenseVendor}</p> */}
     </main>
   );
 }

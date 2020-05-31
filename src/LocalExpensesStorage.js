@@ -7,6 +7,7 @@ class LocalExpensesStroage extends Component {
     const savedExpenses = getSavedExpenses;
     savedExpenses.push(props.expense);
     localStorage.setItem("expenses", JSON.stringify(savedExpenses));
+    return savedExpenses
   };
 
   getSavedExpenses = () => {
@@ -14,8 +15,7 @@ class LocalExpensesStroage extends Component {
   };
 
   render() {
-    this.setLocalExpenses
-    return savedExpenses;
+    return setLocalExpenses
   }
 }
 

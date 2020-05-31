@@ -1,8 +1,18 @@
-class Expense {
-  constructor(date, description, vendor, amount, ) {
-    this.expenseDate = date;
-    this.expenseDescription = description;
-    this.expenseVendor = vendor;
-    this.expenseAmount = amount;
+import React, { Component } from "react"
+
+class Expense extends Component {
+  render() {
+    const renderExpense = () => {
+      return {
+        expenseDate: props.expenseDate,
+        expenseDescription: props.expenseDescription,
+        expenseVendor: props.expenseVendor,
+        expenseAmount: props.expenseAmount,
+      };
+    };
+
+    return renderExpense
   }
 }
+
+export default Expense

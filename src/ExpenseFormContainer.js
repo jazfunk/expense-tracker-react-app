@@ -9,6 +9,7 @@ class ExpenseFormContainer extends Component {
       expenseDescription: "",
       expenseAmount: 0,
       expenseVendor: "",
+      expenses: [],
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -23,8 +24,16 @@ class ExpenseFormContainer extends Component {
   }
 
   handleSubmit(event) {
-    event.preventDefault()
+    event.preventDefault();
     // add item expense
+    // It's unclear to me what to do from here
+    // I need to take the expense object from the form
+    // Add it to the object array that populates the table
+    // Save it to local storage
+    // Realod from local storage?
+    const data = new FormData(event.target);
+    const expense = JSON.stringify(Object.fromEntries(data))
+    console.log(expense);
   }
 
   render() {
@@ -32,7 +41,7 @@ class ExpenseFormContainer extends Component {
       <ExpenseComponent
         handleChange={this.handleChange}
         handleSubmit={this.handleSubmit}
-        expenses={this.state}
+        expense={this.state}
       />
     );
   }
