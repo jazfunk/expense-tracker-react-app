@@ -27,6 +27,7 @@ const ExpensesTable = (props) => {
 
   // console.log(props)
 
+  // debugger
   return (
     <div>
       <ReactBootStrap.Table striped bordered hover>
