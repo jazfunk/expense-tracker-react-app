@@ -15,15 +15,15 @@ class ExpenseFormContainer extends Component {
       expenses: [{}],
     };
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleChange = this.handleChange.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
     // check for local storage here
   }
 
-  handleChange(event) {
+  handleChange = (event) => {
     event.preventDefault();
     const { name, value } = event.target;
     this.setState({
@@ -31,7 +31,7 @@ class ExpenseFormContainer extends Component {
     });
   }
 
-  handleSubmit(event) {
+  handleSubmit = (event) => {
     event.preventDefault();
     // add item expense
     // It's unclear to me what to do from here
