@@ -13,7 +13,6 @@ class AppHeader extends Component {
             </div>
             <div className="col-sm-10 p-2 my-0 border">
               <h1>Expense Tracker</h1>
-              <h4>with React & Bootstrap 4</h4>
             </div>
           </div>
         </div>

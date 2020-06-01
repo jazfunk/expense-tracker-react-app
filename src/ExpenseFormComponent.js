@@ -12,7 +12,7 @@ function ExpenseFormComponent(props) {
             type="date"
             id="date"
             name="expenseDate"
-            value={props.expense.expenseDate}
+            value={props.expenseDate}
             className="form-control"
             onChange={props.handleChange}
             placeholder="Date"
@@ -27,7 +27,7 @@ function ExpenseFormComponent(props) {
             type="text"
             id="description"
             name="expenseDescription"
-            value={props.expense.expenseDescription}
+            value={props.expenseDescription}
             className="form-control"
             onChange={props.handleChange}
             placeholder="Description"
@@ -44,7 +44,7 @@ function ExpenseFormComponent(props) {
             name="expenseAmount"
             min=".00"
             step="any"
-            value={props.expense.expenseAmount}
+            value={props.expenseAmount}
             className="form-control"
             onChange={props.handleChange}
             placeholder="0.00"
@@ -58,7 +58,7 @@ function ExpenseFormComponent(props) {
           <input
             id="vendor"
             name="expenseVendor"
-            value={props.expense.expenseVendor}
+            value={props.expenseVendor}
             className="form-control"
             onChange={props.handleChange}
             placeholder="Vendor"

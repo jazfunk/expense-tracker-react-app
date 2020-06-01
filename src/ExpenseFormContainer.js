@@ -1,18 +1,26 @@
 import React, { Component } from "react";
 import ExpenseComponent from "./ExpenseFormComponent";
+import ExpensesTable from "./ExpensesTable";
 
 class ExpenseFormContainer extends Component {
   constructor() {
     super();
     this.state = {
-      expenseDate: "",
-      expenseDescription: "",
-      expenseAmount: 0,
-      expenseVendor: "",
-      expenses: [],
+      expense: {
+        expenseDate: "",
+        expenseDescription: "",
+        expenseAmount: 0,
+        expenseVendor: "",
+      },
+      expenses: [{}],
     };
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  componentDidMount() {
+    // check for local storage here
   }
 
   handleChange(event) {
@@ -32,17 +40,28 @@ class ExpenseFormContainer extends Component {
     // Save it to local storage
     // Realod from local storage?
     const data = new FormData(event.target);
-    const expense = JSON.stringify(Object.fromEntries(data))
-    console.log(expense);
+    const expense = JSON.stringify(Object.fromEntries(data));
+    this.setState((prevState) => {
+      const expenses = prevState.expenses;
+      expenses.push(expense);
+      return {
+        expenses: { expenses },
+      };
+    });
+    console.log(this.state.expenses)
+    console.log(this.state.expense)
   }
 
   render() {
     return (
-      <ExpenseComponent
-        handleChange={this.handleChange}
-        handleSubmit={this.handleSubmit}
-        expense={this.state}
-      />
+      <div>
+        <ExpenseComponent
+          handleChange={this.handleChange}
+          handleSubmit={this.handleSubmit}
+          expense={this.state.newExpense}
+        />
+        <ExpensesTable expenses={this.state.expenses} />
+      </div>
     );
   }
 }
