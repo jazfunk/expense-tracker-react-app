@@ -2,8 +2,8 @@ import React from "react";
 import * as ReactBootStrap from "react-bootstrap";
 
 const ExpensesTable = (props) => {
+  // debugger
   const renderExpense = (expense, index) => {
-    debugger;
     if (props.expenses.length > 0) {
       return (
         <tr key={index}>
@@ -25,9 +25,6 @@ const ExpensesTable = (props) => {
     }
   };
 
-  // console.log(props)
-
-  // debugger
   return (
     <div>
       <ReactBootStrap.Table striped bordered hover>

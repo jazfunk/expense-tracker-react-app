@@ -17,8 +17,8 @@ class ExpenseFormContainer extends Component {
   }
 
   componentDidMount = () => {
-    console.log(this.state.expense);
-    console.log(this.state.expenses);
+    // console.log(this.state.expense);
+    // console.log(this.state.expenses);
   };
 
   handleChange = (event) => {
@@ -31,29 +31,30 @@ class ExpenseFormContainer extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+    debugger
     // add item expense
     // It's unclear to me what to do from here
     // I need to take the expense object from the form
     // Add it to the object array that populates the table
-    const data = new FormData(event.target);
-    const expense = JSON.stringify(Object.fromEntries(data));
+    // const data = new FormData(event.target);
+    // const expense = JSON.stringify(Object.fromEntries(data));
     this.setState((prevState) => {
       const expenses = prevState.expenses;
-      expenses.push(expense);
-      return {
-        expenses: { expenses },
-      };
+      // console.log(expense)
+      // expenses.push(expense)
+      console.log(expenses)
+      return [ ...expenses ]
     });
-    console.log(this.state.expense);
   };
 
   render() {
+    // debugger
     return (
       <div>
         <ExpenseComponent
           handleChange={this.handleChange}
           handleSubmit={this.handleSubmit}
-          expense={this.state.newExpense}
+          expense={this.state.expense}
         />
         <ExpensesTable expenses={this.state.expenses} />
       </div>
