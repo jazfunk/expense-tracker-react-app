@@ -31,24 +31,24 @@ class ExpenseFormContainer extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    debugger
     // add item expense
-    // It's unclear to me what to do from here
-    // I need to take the expense object from the form
-    // Add it to the object array that populates the table
+    debugger
+
     // const data = new FormData(event.target);
     // const expense = JSON.stringify(Object.fromEntries(data));
+
     this.setState((prevState) => {
-      const expenses = prevState.expenses;
+      const expenses = prevState.expenses
+
       // console.log(expense)
       // expenses.push(expense)
+
       console.log(expenses)
       return [ ...expenses ]
     });
   };
 
   render() {
-    // debugger
     return (
       <div>
         <ExpenseComponent
