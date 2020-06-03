@@ -1,6 +1,6 @@
 import React from "react";
 
-function ExpenseFormComponent(props) {
+const ExpenseFormComponent = (props) => {
   return (
     <main>
       <form className="form" onSubmit={props.handleSubmit}>
@@ -67,12 +67,6 @@ function ExpenseFormComponent(props) {
 
         <button className="btn-primary ml-3 mb-3">Add Expense</button>
       </form>
-      {/* <hr />
-      <h2>You entered:</h2>
-      <p>{props.expense.expenseDate}</p>
-      <p>{props.expense.expenseDescription}</p>
-      <p>{props.expense.expenseAmount}</p>
-      <p>{props.expense.expenseVendor}</p> */}
     </main>
   );
 }

@@ -17,10 +17,10 @@ class ExpenseFormContainer extends Component {
   }
 
   componentDidMount() {
-    const savedExpenses = JSON.parse(window.localStorage.getItem("expenses")) || []
+    const savedExpenses = JSON.parse(window.localStorage.getItem("expenses")) || [];
     this.setState({
-      expenses: [...savedExpenses]
-    })
+      expenses: [...savedExpenses],
+    });
   }
 
   handleChange = (event) => {
@@ -42,12 +42,14 @@ class ExpenseFormContainer extends Component {
 
     const expenses = this.state.expenses;
     expenses.push(addExpense);
-    localStorage.setItem("expenses", JSON.stringify(expenses))
-    // console.log(expenses);
     this.setState({
       expenses: [...expenses],
     });
   };
+
+  componentDidUpdate() {
+    localStorage.setItem("expenses", JSON.stringify(this.state.expenses));
+  }
 
   render() {
     return (
