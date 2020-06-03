@@ -31,20 +31,18 @@ class ExpenseFormContainer extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    // add item expense
-    debugger
-
-    // const data = new FormData(event.target);
-    // const expense = JSON.stringify(Object.fromEntries(data));
-
-    this.setState((prevState) => {
-      const expenses = prevState.expenses
-
-      // console.log(expense)
-      // expenses.push(expense)
-
-      console.log(expenses)
-      return [ ...expenses ]
+    const addExpense = {
+      expenseDate: this.state.expenseDate,
+      expenseDescription: this.state.expenseDescription,
+      expenseAmount: this.state.expenseAmount,
+      expenseVendor: this.state.expenseVendor,      
+    }
+    
+    const expenses = this.state.expenses;
+    expenses.push(addExpense);
+    console.log(expenses);
+    this.setState({
+      expenses: [...expenses]
     });
   };
 
