@@ -16,8 +16,8 @@ class ExpenseFormContainer extends Component {
     };
   }
 
-  componentDidMount() {
-    const savedExpenses = JSON.parse(window.localStorage.getItem("expenses")) || [];
+  componentDidMount= () => {
+    const savedExpenses = JSON.parse(window.localStorage.getItem("expenses")) || []
     this.setState({
       expenses: [...savedExpenses],
     });
@@ -25,29 +25,39 @@ class ExpenseFormContainer extends Component {
 
   handleChange = (event) => {
     event.preventDefault();
-    const { name, value } = event.target;
+    const { name, value } = event.target
     this.setState({
       [name]: value,
     });
   };
 
   handleSubmit = (event) => {
-    event.preventDefault();
-    const addExpense = {
+    event.preventDefault()
+    const expense = {
       expenseDate: this.state.expenseDate,
       expenseDescription: this.state.expenseDescription,
       expenseAmount: this.state.expenseAmount,
       expenseVendor: this.state.expenseVendor,
     };
 
-    const expenses = this.state.expenses;
-    expenses.push(addExpense);
+    const expenses = this.state.expenses
+    expenses.push(expense);
     this.setState({
       expenses: [...expenses],
     });
   };
 
-  componentDidUpdate() {
+
+  handleDelete = (event) => {
+    event.preventDefault();
+    const expenses = this.state.expenses
+    expenses.splice(event.target.id, 1)
+    this.setState({
+      expenses: [...expenses],
+    })
+  }
+
+  componentDidUpdate = () => {
     localStorage.setItem("expenses", JSON.stringify(this.state.expenses));
   }
 
@@ -59,10 +69,13 @@ class ExpenseFormContainer extends Component {
           handleSubmit={this.handleSubmit}
           expense={this.state.expense}
         />
-        <ExpensesTable expenses={this.state.expenses} />
+        <ExpensesTable 
+          expenses={this.state.expenses} 
+          handleDelete={this.handleDelete}
+        />
       </div>
     );
   }
 }
 
-export default ExpenseFormContainer;
+export default ExpenseFormContainer

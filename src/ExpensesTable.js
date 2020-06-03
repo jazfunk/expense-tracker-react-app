@@ -2,7 +2,6 @@ import React from "react";
 import * as ReactBootStrap from "react-bootstrap";
 
 const ExpensesTable = (props) => {
-  // debugger
   const renderExpense = (expense, index) => {
     if (props.expenses.length > 0) {
       return (
@@ -16,6 +15,7 @@ const ExpensesTable = (props) => {
               id={index}
               name="deleteButton"
               className="btn btn-danger"
+              onClick={props.handleDelete}
             >
               X
             </ReactBootStrap.Button>
