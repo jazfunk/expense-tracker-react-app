@@ -1,9 +1,0 @@
-// Create LocalStorage functions
-// Check for LocalStorage object on load
-
-// Using React class component
-// Return object of Expenses (Expense class)
-
-// Write this object to LocalStorage
-// Display table with items fro LocalStorage.
-// --Call same method from on load to re-initialize
