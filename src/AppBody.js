@@ -3,7 +3,7 @@ import ExpenseForm from "./ExpenseFormContainer";
 
 class AppBody extends Component {
 
-  render() {
+  render = () => {
     return (
       <div className="container">
         <ExpenseForm />

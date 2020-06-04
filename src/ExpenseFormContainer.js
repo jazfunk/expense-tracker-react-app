@@ -60,7 +60,7 @@ class ExpenseFormContainer extends Component {
     localStorage.setItem("expenses", JSON.stringify(this.state.expenses));
   }
 
-  render() {
+  render = () => {
     return (
       <div>
         <ExpenseFormComponent

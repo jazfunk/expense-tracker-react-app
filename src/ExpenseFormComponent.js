@@ -46,8 +46,8 @@ const ExpenseFormComponent = (props) => {
             step="any"
             value={props.expenseAmount}
             className="form-control"
-            onChange={props.handleChange}
             placeholder="0.00"
+            onChange={props.handleChange}
           />
         </div>
 
