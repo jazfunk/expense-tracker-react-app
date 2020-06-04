@@ -1,17 +1,17 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React, { Component } from "react"
+import logo from "./logo.svg"
+import "./App.css"
 
 class AppHeader extends Component {
   render() {
     return (
       <header>
-        <div className="container-fluid p-0 m-0 border">
+        <div className="container">
           <div className="row">
-            <div className="col-sm-2 p-2 my-0 border">
+            <div className="col-sm-2">
               <img src={logo} className="App-logo" alt="logo" />
             </div>
-            <div className="col-sm-10 p-2 my-0 border">
+            <div className="col-sm-10">
               <h1>Expense Tracker</h1>
             </div>
           </div>

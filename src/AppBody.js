@@ -5,7 +5,7 @@ class AppBody extends Component {
 
   render() {
     return (
-      <div className="container-fluid border">
+      <div className="container">
         <ExpenseForm />
       </div>
     );

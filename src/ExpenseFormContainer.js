@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ExpenseComponent from "./ExpenseFormComponent";
+import ExpenseFormComponent from "./ExpenseFormComponent";
 import ExpensesTable from "./ExpensesTable";
 
 class ExpenseFormContainer extends Component {
@@ -47,7 +47,6 @@ class ExpenseFormContainer extends Component {
     });
   };
 
-
   handleDelete = (event) => {
     event.preventDefault();
     const expenses = this.state.expenses
@@ -64,7 +63,7 @@ class ExpenseFormContainer extends Component {
   render() {
     return (
       <div>
-        <ExpenseComponent
+        <ExpenseFormComponent
           handleChange={this.handleChange}
           handleSubmit={this.handleSubmit}
           expense={this.state.expense}
