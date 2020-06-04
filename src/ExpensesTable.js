@@ -1,20 +1,23 @@
 import React from "react";
 import * as ReactBootStrap from "react-bootstrap";
+import moment from "moment"
 
 const ExpensesTable = (props) => {
   const renderExpense = (expense, index) => {
     if (props.expenses.length > 0) {
+      const dateMoment = moment(expense.expenseDate)      
+      const amountToFormat = `$${expense.expenseAmount}`      
       return (
         <tr key={index}>
-          <td>{expense.expenseDate}</td>
-          <td>{expense.expenseDescription}</td>
-          <td>{expense.expenseAmount}</td>
-          <td>{expense.expenseVendor}</td>
-          <td>
+          <td className="align-middle">{dateMoment.format('MM-DD-YYYY')}</td>
+          <td className="align-middle text-left">{expense.expenseDescription}</td>
+          <td className="align-middle text-right">{amountToFormat}</td>
+          <td className="align-middle text-left">{expense.expenseVendor}</td>
+          <td className="align-middle">
             <ReactBootStrap.Button
               id={index}
               name="deleteButton"
-              className="btn btn-danger"
+              className="btn-danger"
               onClick={props.handleDelete}
             >
               X
