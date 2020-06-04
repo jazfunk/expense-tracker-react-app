@@ -4,9 +4,9 @@ const ExpenseFormComponent = (props) => {
   return (
     <main>
       <form className="form" onSubmit={props.handleSubmit}>
-        <div className="input-group mb-3">
+        <div className="input-group mb-2">
           <div className="input-group-prepend">
-            <span className="input-group-text">Date</span>
+            <span className="input-group-text">When?</span>
           </div>
           <input
             type="date"
@@ -15,11 +15,10 @@ const ExpenseFormComponent = (props) => {
             value={props.expenseDate}
             className="form-control"
             onChange={props.handleChange}
-            placeholder="Date"
           />
         </div>
 
-        <div className="input-group mb-3">
+        <div className="input-group mb-2">
           <div className="input-group-prepend">
             <span className="input-group-text">What?</span>
           </div>
@@ -34,9 +33,9 @@ const ExpenseFormComponent = (props) => {
           />
         </div>
 
-        <div className="input-group mb-3">
+        <div className="input-group mb-2">
           <div className="input-group-prepend">
-            <span className="input-group-text">Amount-$</span>
+            <span className="input-group-text">$</span>
           </div>
           <input
             type="number"
@@ -51,9 +50,9 @@ const ExpenseFormComponent = (props) => {
           />
         </div>
 
-        <div className="input-group mb-3">
+        <div className="input-group mb-2">
           <div className="input-group-prepend">
-            <span className="input-group-text">Who?</span>
+            <span className="input-group-text">Whom?</span>
           </div>
           <input
             id="vendor"
@@ -65,7 +64,7 @@ const ExpenseFormComponent = (props) => {
           />
         </div>
 
-        <button className="btn-primary ml-3 mb-3">Add Expense</button>
+        <button className="btn-primary mb-2">Add Expense</button>
       </form>
     </main>
   );
