@@ -12,7 +12,7 @@ class AppHeader extends Component {
               <img src={logo} className="App-logo" alt="logo" />
             </div>
             <div className="col-sm-10">
-              <h1>My Expense Tracker</h1>
+              <h1>My React Expense Tracker</h1>
             </div>
           </div>
         </div>
