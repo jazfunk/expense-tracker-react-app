@@ -22,7 +22,7 @@ const ExpensesTable = (props) => {
               className="btn-danger btn-sm"
               onClick={props.handleDelete}
             >
-              &times;
+              X
             </ReactBootStrap.Button>
           </td>
         </tr>
