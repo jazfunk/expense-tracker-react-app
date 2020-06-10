@@ -5,13 +5,15 @@ import moment from "moment"
 const ExpensesTable = (props) => {
   const renderExpense = (expense, index) => {
     if (props.expenses.length > 0) {
-      const dateMoment = moment(expense.expenseDate)      
-      const amountToFormat = `$${expense.expenseAmount}`      
+      const dateMoment = moment(expense.expenseDate)
+      const amount = parseFloat(expense.expenseAmount)            
+      const amountFormatted = `$${amount.toFixed(2)}`   
+        
       return (
         <tr key={index}>
           <td className="align-middle">{dateMoment.format('MM-DD-YYYY')}</td>
           <td className="align-middle text-left">{expense.expenseDescription}</td>
-          <td className="align-middle text-right">{amountToFormat}</td>
+          <td className="align-middle text-right">{amountFormatted}</td>
           <td className="align-middle text-left">{expense.expenseVendor}</td>
           <td className="align-middle">
             <ReactBootStrap.Button
