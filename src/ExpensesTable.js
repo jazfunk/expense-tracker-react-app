@@ -19,10 +19,10 @@ const ExpensesTable = (props) => {
             <ReactBootStrap.Button
               id={index}
               name="deleteButton"
-              className="btn-danger"
+              className="btn-danger btn-sm"
               onClick={props.handleDelete}
             >
-              X
+              &times;
             </ReactBootStrap.Button>
           </td>
         </tr>
