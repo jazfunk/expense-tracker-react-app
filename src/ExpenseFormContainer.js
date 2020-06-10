@@ -4,7 +4,7 @@ import ExpensesTable from "./ExpensesTable";
 
 class ExpenseFormContainer extends Component {
   constructor() {
-    super();
+    super()
     this.state = {
       expense: {
         expenseDate: "",
@@ -33,6 +33,7 @@ class ExpenseFormContainer extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
+    event.target.reset()    
     const expense = {
       expenseDate: this.state.expenseDate,
       expenseDescription: this.state.expenseDescription,
@@ -59,7 +60,7 @@ class ExpenseFormContainer extends Component {
   componentDidUpdate = () => {
     localStorage.setItem("expenses", JSON.stringify(this.state.expenses));
   }
-
+  
   render = () => {
     return (
       <div>

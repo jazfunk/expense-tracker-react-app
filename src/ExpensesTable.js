@@ -1,18 +1,27 @@
 import React from "react";
 import * as ReactBootStrap from "react-bootstrap";
-import moment from "moment"
+import moment from "moment";
 
 const ExpensesTable = (props) => {
   const renderExpense = (expense, index) => {
     if (props.expenses.length > 0) {
-      const dateMoment = moment(expense.expenseDate)
-      const amount = parseFloat(expense.expenseAmount)            
-      const amountFormatted = `$${amount.toFixed(2)}`   
-        
+      const dateMoment = moment(expense.expenseDate);
+      let amount;
+            
+      try {
+        amount = parseFloat(expense.expenseAmount);
+      } catch (error) {
+        amount = 0;
+      }
+
+      const amountFormatted = `$${amount.toFixed(2)}`;
+
       return (
         <tr key={index}>
-          <td className="align-middle">{dateMoment.format('MM-DD-YYYY')}</td>
-          <td className="align-middle text-left">{expense.expenseDescription}</td>
+          <td className="align-middle">{dateMoment.format("MM-DD-YYYY")}</td>
+          <td className="align-middle text-left">
+            {expense.expenseDescription}
+          </td>
           <td className="align-middle text-right">{amountFormatted}</td>
           <td className="align-middle text-left">{expense.expenseVendor}</td>
           <td className="align-middle">

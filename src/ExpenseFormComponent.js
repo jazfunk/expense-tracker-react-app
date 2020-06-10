@@ -15,6 +15,7 @@ const ExpenseFormComponent = (props) => {
             value={props.expenseDate}
             className="form-control"
             onChange={props.handleChange}
+            required={true}
           />
         </div>
 
@@ -30,6 +31,7 @@ const ExpenseFormComponent = (props) => {
             className="form-control"
             onChange={props.handleChange}
             placeholder="Description"
+            required={true}
           />
         </div>
 
@@ -47,6 +49,7 @@ const ExpenseFormComponent = (props) => {
             className="form-control"
             placeholder="0.00"
             onChange={props.handleChange}
+            required={true}
           />
         </div>
 
@@ -61,6 +64,7 @@ const ExpenseFormComponent = (props) => {
             className="form-control"
             onChange={props.handleChange}
             placeholder="Vendor"
+            required={true}
           />
         </div>
 
