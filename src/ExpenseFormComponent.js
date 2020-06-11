@@ -6,7 +6,7 @@ const ExpenseFormComponent = (props) => {
       <form className="form" onSubmit={props.handleSubmit}>
         <div className="input-group mb-2">
           <div className="input-group-prepend">
-            <span className="input-group-text">When?</span>
+            <span className="input-group-text">When did you purchase?</span>
           </div>
           <input
             type="date"
@@ -21,7 +21,7 @@ const ExpenseFormComponent = (props) => {
 
         <div className="input-group mb-2">
           <div className="input-group-prepend">
-            <span className="input-group-text">What?</span>
+            <span className="input-group-text">What did you purchase?</span>
           </div>
           <input
             type="text"
@@ -37,7 +37,7 @@ const ExpenseFormComponent = (props) => {
 
         <div className="input-group mb-2">
           <div className="input-group-prepend">
-            <span className="input-group-text">Price $</span>
+            <span className="input-group-text">How much did it cost? $</span>
           </div>
           <input
             type="number"
@@ -55,7 +55,7 @@ const ExpenseFormComponent = (props) => {
 
         <div className="input-group mb-2">
           <div className="input-group-prepend">
-            <span className="input-group-text">Whom?</span>
+            <span className="input-group-text">Whom did you purchase from?</span>
           </div>
           <input
             id="vendor"
