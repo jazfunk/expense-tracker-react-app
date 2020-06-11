@@ -37,7 +37,7 @@ const ExpenseFormComponent = (props) => {
 
         <div className="input-group mb-2">
           <div className="input-group-prepend">
-            <span className="input-group-text">Cost $</span>
+            <span className="input-group-text">Price $</span>
           </div>
           <input
             type="number"
