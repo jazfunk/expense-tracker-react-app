@@ -6,7 +6,7 @@ const ExpenseFormComponent = (props) => {
       <form className="form" onSubmit={props.handleSubmit}>
         <div className="input-group mb-2">
           <div className="input-group-prepend">
-            <span className="input-group-text">When did you purchase?</span>
+            <span className="input-group-text">Date</span>
           </div>
           <input
             type="date"
@@ -21,7 +21,7 @@ const ExpenseFormComponent = (props) => {
 
         <div className="input-group mb-2">
           <div className="input-group-prepend">
-            <span className="input-group-text">What did you purchase?</span>
+            <span className="input-group-text">Item</span>
           </div>
           <input
             type="text"
@@ -30,14 +30,29 @@ const ExpenseFormComponent = (props) => {
             value={props.expenseDescription}
             className="form-control"
             onChange={props.handleChange}
-            placeholder="Description"
+            placeholder="Describe item(s) purchased"
             required={true}
           />
         </div>
 
         <div className="input-group mb-2">
           <div className="input-group-prepend">
-            <span className="input-group-text">How much did it cost? $</span>
+            <span className="input-group-text">Vendor</span>
+          </div>
+          <input
+            id="vendor"
+            name="expenseVendor"
+            value={props.expenseVendor}
+            className="form-control"
+            onChange={props.handleChange}
+            placeholder="Where item(s) purchased"
+            required={true}
+          />
+        </div>
+        
+        <div className="input-group mb-2">
+          <div className="input-group-prepend">
+            <span className="input-group-text">$</span>
           </div>
           <input
             type="number"
@@ -49,21 +64,6 @@ const ExpenseFormComponent = (props) => {
             className="form-control"
             placeholder="0.00"
             onChange={props.handleChange}
-            required={true}
-          />
-        </div>
-
-        <div className="input-group mb-2">
-          <div className="input-group-prepend">
-            <span className="input-group-text">Whom did you purchase from?</span>
-          </div>
-          <input
-            id="vendor"
-            name="expenseVendor"
-            value={props.expenseVendor}
-            className="form-control"
-            onChange={props.handleChange}
-            placeholder="Vendor"
             required={true}
           />
         </div>

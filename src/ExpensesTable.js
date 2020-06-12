@@ -22,8 +22,8 @@ const ExpensesTable = (props) => {
           <td className="align-middle text-left">
             {expense.expenseDescription}
           </td>
-          <td className="align-middle text-right">{amountFormatted}</td>
           <td className="align-middle text-left">{expense.expenseVendor}</td>
+          <td className="align-middle text-right">{amountFormatted}</td>
           <td className="align-middle">
             <ReactBootStrap.Button
               id={index}
@@ -46,8 +46,8 @@ const ExpensesTable = (props) => {
           <tr>
             <th>Date</th>
             <th>Description</th>
-            <th>Amount</th>
             <th>Vendor</th>
+            <th>Amount</th>
             <th>Delete</th>
           </tr>
         </thead>
