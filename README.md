@@ -39,6 +39,7 @@ Run app in the development mode:  Open [http://localhost:3000](http://localhost:
 
 
 ## Built With
+* [React](https://reactjs.org/docs/getting-started.html)
 * [Node](https://nodejs.org/en/)
 * [Boostrap v4](https://getbootstrap.com/docs/4.0/getting-started/download/)
 * [Moment.js](https://momentjs.com/)
