@@ -4,8 +4,8 @@ A simple expense tracker application, built with React/Node.js, Bootstrap v4, Mo
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Links
-[View Application](https://jazfunk.github.io/expense-tracker-react-app/)  
-[View Repository](https://github.com/jazfunk/expense-tracker-react-app.git)
+[View Application on Heroku](https://arcane-peak-81489.herokuapp.com/)  
+[View GitHub Repository](https://github.com/jazfunk/expense-tracker-react-app.git)
 
 
 ## Application Image
