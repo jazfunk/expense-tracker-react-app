@@ -3,8 +3,7 @@ import * as ReactBootStrap from "react-bootstrap";
 import moment from "moment";
 
 const ExpensesTable = (props) => {
-  const renderExpense = (expense, index) => {
-    if (props.expenses.length > 0) {
+  let expenses = props.expenses.map((expense, index) => {  
       const dateMoment = moment(expense.expenseDate);
       let amount;
             
@@ -36,8 +35,11 @@ const ExpensesTable = (props) => {
           </td>
         </tr>
       );
-    }
-  };
+  });
+
+  expenses = expenses.length === 0
+    ? <tr><td colspan="5">No expenses have been added!</td></tr>
+    : expenses;
 
   return (
     <div>
@@ -51,7 +53,7 @@ const ExpensesTable = (props) => {
             <th>Delete</th>
           </tr>
         </thead>
-        <tbody>{props.expenses.map(renderExpense)}</tbody>
+        <tbody>{expenses}</tbody>
       </ReactBootStrap.Table>
     </div>
   );

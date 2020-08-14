@@ -4,7 +4,7 @@ import ExpensesTable from "./ExpensesTable";
 
 class ExpenseFormContainer extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       expense: {
         expenseDate: "",
@@ -16,24 +16,26 @@ class ExpenseFormContainer extends Component {
     };
   }
 
-  componentDidMount= () => {
-    const savedExpenses = JSON.parse(window.localStorage.getItem("expenses")) || []
+  componentDidMount = () => {
+    const savedExpenses =
+      JSON.parse(window.localStorage.getItem("expenses")) || [];
     this.setState({
-      expenses: [...savedExpenses],
+      expenses: savedExpenses,
     });
-  }
+  };
 
   handleChange = (event) => {
     event.preventDefault();
-    const { name, value } = event.target
+    const { name, value } = event.target;
     this.setState({
       [name]: value,
     });
   };
 
   handleSubmit = (event) => {
-    event.preventDefault()
-    event.target.reset()    
+    event.preventDefault();
+    event.target.reset();
+
     const expense = {
       expenseDate: this.state.expenseDate,
       expenseDescription: this.state.expenseDescription,
@@ -41,26 +43,32 @@ class ExpenseFormContainer extends Component {
       expenseVendor: this.state.expenseVendor,
     };
 
-    const expenses = this.state.expenses
+    const expenses = this.state.expenses.map((expense) =>
+      Object.assign({}, expense)
+    );
     expenses.push(expense);
     this.setState({
-      expenses: [...expenses],
+      expenses: expenses,
     });
   };
 
   handleDelete = (event) => {
     event.preventDefault();
-    const expenses = this.state.expenses
-    expenses.splice(event.target.id, 1)
+
+    const expenses = this.state.expenses.map((expense) =>
+      Object.assign({}, expense)
+    );
+    expenses.splice(event.target.id, 1);
+
     this.setState({
-      expenses: [...expenses],
-    })
-  }
+      expenses: expenses,
+    });
+  };
 
   componentDidUpdate = () => {
     localStorage.setItem("expenses", JSON.stringify(this.state.expenses));
-  }
-  
+  };
+
   render = () => {
     return (
       <div>
@@ -69,13 +77,13 @@ class ExpenseFormContainer extends Component {
           handleSubmit={this.handleSubmit}
           expense={this.state.expense}
         />
-        <ExpensesTable 
-          expenses={this.state.expenses} 
+        <ExpensesTable
+          expenses={this.state.expenses}
           handleDelete={this.handleDelete}
         />
       </div>
     );
-  }
+  };
 }
 
-export default ExpenseFormContainer
+export default ExpenseFormContainer;
